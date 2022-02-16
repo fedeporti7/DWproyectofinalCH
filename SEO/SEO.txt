@@ -1,0 +1,8 @@
+Para este desafio, se incluyeron los siguientes cambios destinados a mejorar el SEO del sitio (paginas Index y Ranking):
+
+1)Se incluyeron titulos, descripciones y palabras claves en el head de cada html.
+2)Se verificaron las clases y propiedades de las etiquetas relacionadas a los encabezados en el archivo style.scss.
+3)Se reviso la presentación de los estilos y se eliminaron fragmentos de codigos no utilizados tanto en los archivos html como en los scss.
+4)Se eliminaron los archivos complementarios no utilizados para este desafio.
+5)Se verifican visualizaciones mobile y funcionamiento responsive.
+6)Se plantea navegación en base a pagina principal Index.

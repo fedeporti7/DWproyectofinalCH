@@ -1,0 +1,173 @@
+@import"colores";
+@import"etiquetas";
+
+*{  margin:0;
+    padding:0;}
+
+
+.container-fluid{
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;}
+
+    .header{
+        text-align: left;
+        justify-content: left;
+        background-color:$color1;
+        animation-name:animacion1;
+        animation-iteration-count:infinite;
+        animation-timing-function:ease-in;
+        animation-delay:0s;
+        animation-duration:1s;
+        padding: 25px 25px 25px 25px;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+        font-weight: 100;
+        font-family: Arial;
+        font-size: xx-large;
+        font-style: oblique;
+        @keyframes animacion1{
+            0%{background-color:$color6;color:$color4;}
+            50% {
+                background-color:$color7;
+                color: $color4;
+            }
+            100% {
+                background-color:$color8;
+                color: $color4;
+            }
+        }
+    }
+    
+        .rounded {border-radius: 0.25rem !important;}
+    
+        .mx-auto{
+              margin-top:5vh;
+              margin-bottom:5vh;
+              margin-right: auto !important;
+              margin-left: auto !important;}
+             
+        .d-block{
+              display:block !important;}
+      .table {
+        --bs-table-bg: transparent;
+        --bs-table-accent-bg: transparent;
+        --bs-table-striped-color: $color2;
+        --bs-table-striped-bg: $color2;
+        --bs-table-active-color: $color2;
+        --bs-table-active-bg: $color2;
+        --bs-table-hover-color: $color2;
+        --bs-table-hover-bg: $color2;
+        width: 75%;
+        margin-bottom: 1rem;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        color: $color2;
+        vertical-align: top;
+        border: color $color4;
+    
+/* Comando &*/
+&:hover {
+    color: $color1;
+    background-color:$color2;
+   }}
+
+.menu{text-align: center;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    background-color:$color2;
+    color:$color4;
+    font-family: Calibri;}
+
+/*Nesting*/
+.nav{display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    justify-content: space-around;
+pills{
+    color:$color4;
+    background-color:$color3;}
+fill{
+    flex: 1 1 auto;
+    text-align: center;}
+}
+.nav-link{display: block;
+        padding: 0.5rem 1rem;
+        color:$color2;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out; 
+        background-color: 0.15s ease-in-out;
+        border-color: 0.15s ease-in-out;}
+        
+.nav-link.active{color:$color4;
+            background-color:$color3;}
+        
+
+.footer{background-color:$color2;
+    font-family: Calibri;
+    color:$color4;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-top:1vh;
+    margin-bottom:1vh;}
+
+/*Mapa*/
+
+$mapaestilos: (
+  color1: blue,
+  color2: darkblue,
+);
+
+.primero{
+    color:map-get($map:$mapaestilos, $key:color1);
+    }
+
+.ultimo{color:map-get($map:$mapaestilos, $key:color2);
+    }
+
+/*Mixin*/
+
+@mixin margenes($margenizq,$margender){
+    margin-left:$margenizq;
+    margin-right:$margender;
+}
+    
+/*Extend*/
+
+.list-group-item {
+    text-align: center;
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: transparent;
+    @include margenes(25%,25%);
+    primero{@extend .primero;
+       }
+    ultimo{@extend .ultimo;
+        }
+}
+
+.calificacion-excelente{@extend .list-group-item;
+    background-color: green;
+    color:white;
+    }
+
+.calificacion-buena{@extend .list-group-item;background-color:yellow;}
+.calificacion-regular{@extend .list-group-item;background-color:red;color:white;}
+
+.titulo{
+    @extend h6,h5,h4,h3,h2,h1 ;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    line-height: 2;
+    text-align: center;
+              }
+
+
