@@ -45,3 +45,12 @@ a {
             color: $color3;
             text-decoration: underline;
           }
+iframe {
+            border: 0;
+          }
+label {
+            display: inline-block;
+          }
+button {
+            border-radius: 0;
+          }
