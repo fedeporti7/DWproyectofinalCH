@@ -1,4 +1,4 @@
-Para este desafio, se incluyeron los siguientes cambios destinados a mejorar el SEO del sitio completo:
+Para esta entrega, se incluyeron los siguientes cambios destinados a mejorar el SEO del sitio completo:
 
 1)Se incluyeron titulos, descripciones y palabras claves en el head de cada html.
 2)Se verificaron las clases y propiedades de las etiquetas relacionadas a los encabezados en el archivo style.scss.
